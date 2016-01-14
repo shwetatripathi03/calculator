@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Calculator</title>
+</head>
+<body ng-app="calculator">
+ <div class="container" ng-app ng-controller="CalciCtrl">
+    <div id="outline">
+        <!-- Calculator Display -->
+        <div  class="panel" id="display">
+            <!-- Display is bound to scope variables in app.js -->
+            <p class="output" name="output">{{current}}</p>
+                <p class="result" ng-show="showResult">{{output}} </p>
+                
+        </div>
+        <div class="calcbuttons">
+            <!-- Buttons all have ng-click directives that call functions in app.js
+            -->
+            <button name="btn1" class="numberbutton" value="1" ng-click="update('1');updateOutput(1)">1</button>
+            <button name="btn2" class="numberbutton" value="2" ng-click="update('2');updateOutput(2)">2</button>
+            <button name="btn3" class="numberbutton" value="3" ng-click="update('3');updateOutput(3)">3</button>
+            <button name="btnMinus" class="operationbutton" ng-click="update('-');subtract()">-</button>
+            <br>
+            <button name="btn4" class="numberbutton" value="4" ng-click="update('4');updateOutput(4)">4</button>
+            <button name="btn5" class="numberbutton" value="5" ng-click="update('5');updateOutput(5)">5</button>
+            <button name="btn6" class="numberbutton" value="6" ng-click="update('6');updateOutput(6)">6</button>
+            <button name="btnPlus" class="operationbutton" ng-click="update('+');add()">+</button>
+            <br>
+            <button name="btn7" class="numberbutton" value="7" ng-click="update('7');updateOutput(7)">7</button>
+            <button name="btn8" class="numberbutton" value="8" ng-click="update('8');updateOutput(8)">8</button>
+            <button name="btn9" class="numberbutton" value="9" ng-click="update('9');updateOutput(9)">9</button>
+             <button name="btnMultiply" class="operationbutton" ng-click="update('*');multiply()">*</button>
+             <button name="btnDivide" class="operationbutton" ng-click="update('/');divide()">/</button>
+            <button name="btnEquals" class="operationbutton" ng-click="update('=');calculate()">=</button>
+            
+            <button name="btn0" class="numberbutton" value="0" ng-click="update('0');updateOutput(0)">0</button>
+            <button name="btnClear" class="clearbutton" ng-click="update('C');clear()">CLEAR</button>
+        </div>
+    </div>
+   
+</div>
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="lib/angular/angular.min.js"></script>
+<script src="src/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+.container {
+  margin-top: 20px;
+}
+#outline {
+  width: 700px;
+  height: 1000px;
+  margin: 0;
+}
+
+button {
+  width: 150px;
+  height: 100px;
+  background-color: grey;
+  margin: 0; 
+}
+#display {
+  background-color: black;
+  width: 615px;
+  height: 50px;
+  color: white;
+  top: 20px;
+  margin: 0;
+}
+
+p {
+  font-size: 36px;
+  display: inline;
+}
